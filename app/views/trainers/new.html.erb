@@ -1,0 +1,32 @@
+<h1>Sign Up</h1>
+
+<%= form_for @trainer do |form| %>
+<div class="first_name">
+	<%= form.label :first_name %>
+	<%= form.text_field :first_name, type: 'text' %>
+</div>
+
+<div class="last_name">
+	<%= form.label :last_name %>
+	<%= form.text_field :last_name, type: 'text'%>
+</div>
+
+<div class="email">
+	<%= form.label :email %>
+	<%= form.text_field :email, type: 'text'%>
+</div>
+
+<div class ="phone_number">
+	<%= form.label :phone_number %>
+	<%= form.text_field :phone_number, type: 'text'%>
+</div>
+
+<div class ="password">
+	<%= form.label :password %>
+	<%= form.text_field :password, type: 'password'%>
+</div>
+
+<div class ="submit-field">
+	<%= form.submit %>
+</div>
+<% end %>
