@@ -9,6 +9,7 @@ resources :trainers, controller: "trainers"
   resources :clients
   resources :sessions
   resources :listings
+  resources :enquiries
 
   delete "/sign_out" => "sessions#destroy", as: "sign_out"
   patch "/clients" => "clients#update"

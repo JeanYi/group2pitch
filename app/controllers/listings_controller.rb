@@ -37,7 +37,7 @@ class ListingsController < ApplicationController
 	private
 
 	def listing_params
-		params.require(:listing).permit(:name, :short_desc, :long_desc, :start_date, :end_date)
+		params.require(:listing).permit(:name, :short_desc, :long_desc, :start_date, :end_date, :venue)
 	end
 
 end
