@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
 
   	def destroy
 	    session[:client_id] = nil
-	    redirect_to clients_path,
+	    redirect_to new_session_path,
 	    notice: "You succesfully logged out"
 	end
 
@@ -40,6 +40,5 @@ class SessionsController < ApplicationController
 	    redirect_to trainers_path,
 	    notice: "You succesfully logged out"
   	end 
-
 
 end

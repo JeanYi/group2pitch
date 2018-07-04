@@ -1,0 +1,37 @@
+<%= form_for @client , url:clients_path do |f| %>
+
+	<p>
+		<%=f.label "first name" %><br>
+		<%=f.text_field :first_name %>		
+	</p>
+	<p>
+		<%=f.label "last name" %><br>
+		<%=f.text_field :last_name %>		
+	</p>
+	<p>
+		<%=f.label "name of company" %><br>
+		<%=f.text_field :name_of_company %>		
+	</p>
+	<p>
+		<%=f.label "designation" %><br>
+		<%=f.text_field :designation %>		
+	</p>
+	
+	<p>
+		<%=f.label "email" %><br>
+		<%=f.email_field :email %>		
+	</p>
+	<p>
+		<%=f.label "password" %><br>
+		<%=f.password_field :password %>		
+	</p>
+	<p>
+		<%=f.label "phone number" %><br>
+		<%=f.telephone_field :phone_number %>		
+	</p>
+
+	<p>
+		<%=f.submit%>
+	</p>
+
+<%end%>
