@@ -6,7 +6,7 @@ private
 	end
 
 	def authorize
-		redirect_to new_session_path, alert: "Please sign in" if current_client.nil?
+		redirect_to sign_in_path, alert: "Please sign in" if current_client.nil?
 	end
 	
 	def current_trainer 
