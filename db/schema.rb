@@ -10,12 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2018_07_03_062229) do
-
+ActiveRecord::Schema.define(version: 2018_07_04_093123) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "clients", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "name_of_company"
+    t.string "designation"
+    t.string "email"
+    t.string "password_digest"
+    t.string "phone_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "enquiries", force: :cascade do |t|
+    t.string "subject_one"
+    t.string "subject_two"
+    t.integer "budget"
+    t.date "start_date"
+    t.date "end_date"
+    t.string "venue"
+    t.bigint "listings_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "client_id"
+    t.index ["client_id"], name: "index_enquiries_on_client_id"
+    t.index ["listings_id"], name: "index_enquiries_on_listings_id"
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.string "name"
+    t.string "short_desc"
+    t.string "long_desc"
+    t.date "start_date"
+    t.date "end_date"
+    t.string "venue"
+  end
 
   create_table "trainers", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -31,18 +65,6 @@ ActiveRecord::Schema.define(version: 2018_07_03_062229) do
     t.date "birthday"
     t.date "start_date"
     t.integer "rate_per_day"
-
-  create_table "clients", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "name_of_company"
-    t.string "designation"
-    t.string "email"
-    t.string "password_digest"
-    t.string "phone_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-
   end
 
 end

@@ -1,13 +1,22 @@
 Rails.application.routes.draw do
 
+root 'trainers#new'
 
-	root 'trainers/'
-resources :trainers, controller: "trainers"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+resources :trainers
+resources :listings
+  
+resources :clients do 
+  	resources :enquiries
+    end
+ 
 
-
-  resources :clients
-
-  resources :sessions
+  get "/sign_in_trainer" => "sessions#new_trainer", as: "sign_in_trainer"
+  delete "/sign_out_trainer" => "sessions#destroy_trainer", as: "sign_out_trainer"
+  post "/sessions_trainer" => "sessions#create_trainer" 
+  get "/sign_in" => "sessions#new", as: "sign_in"
+  delete "/sign_out" => "sessions#destroy", as: "sign_out"
+  post "/sessions" => "sessions#create" 
+  patch "/clients" => "clients#update"
+  patch "/listings" => "listings#update"
 
 end

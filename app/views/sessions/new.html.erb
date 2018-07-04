@@ -1,8 +1,13 @@
 <h1>Please sign in</h1>
 
 <%= form_tag sessions_path do %>
-<%= text_field_tag :email, nil, placeholder: "iput client email" %>
+<%= text_field_tag :email, nil, placeholder: "input client email" %> 
 <%= password_field_tag :password , nil, placeholder: "input password"%>
 <%= submit_tag "Sign in"%>
 
-<%end%>
+<% end %>
+
+<% if current_client %>
+    <%= button_to "Sign Out", sign_out_path, method: :delete, data: {confirm: "Are you sure?"} %>
+<% end %> 
+

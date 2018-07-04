@@ -1,7 +1,6 @@
 class ClientsController < ApplicationController
 
-	def index
-		
+	def index	
 	end
 
 	def new
@@ -11,6 +10,7 @@ class ClientsController < ApplicationController
 	def create
 		@client = Client.new(client_params)
 		if @client.save 
+			UserMailer.welcome_email(@client).deliver_now
 			redirect_to clients_path
 		else
 			render "new"
@@ -21,6 +21,18 @@ class ClientsController < ApplicationController
 		@client = Client.find(params[:id])
 	end
 
+	def edit
+		@client = Client.find(params[:id])
+	end
+
+	def update
+		@client = current_client
+		if @client.update(client_params)
+			redirect_to clients_path
+		else
+			render 'edit'
+		end
+	end
 
 	private
 
