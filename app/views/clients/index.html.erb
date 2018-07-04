@@ -1,5 +1,5 @@
-<h3>jfdjdsjfslifjs</h3>
+<h1>This is the index page for clients </h1>
 
 <% if current_client %>
-<li><%= link_to t(".sign_out"), sign_out_path, method: :delete %></li>
-<% end %>	
+    <%= button_to "Sign Out", sign_out_path, method: :delete, data: {confirm: "Are you sure?"} %>
+<% end %> 
