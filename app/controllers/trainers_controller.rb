@@ -1,17 +1,28 @@
 class TrainersController < ApplicationController
 
 def new
-@trainer = Trainer.new
+	@trainer = Trainer.new
 end
 
 def create
 	@trainer = Trainer.new(trainers_params)
 	if @trainer.save
-		flash[:successful_update] = "Wohoo! Congrats"
 		redirect_to root_path
 	else
 		render 'new'
 	end
+end
+
+def edit 
+	@trainer =  Trainer.find(params[:id])
+end
+
+def update
+	@trainer= Trainer.find(params[:id])
+    if@trainer.update(trainers_params)
+       redirect_to root_path
+         else render "edit"
+    end
 end
 
 private

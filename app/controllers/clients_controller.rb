@@ -1,7 +1,6 @@
 class ClientsController < ApplicationController
 
-	def index
-		
+	def index	
 	end
 
 	def new
