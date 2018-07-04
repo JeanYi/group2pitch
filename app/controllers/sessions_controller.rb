@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
 	    session[:client_id] = nil
 	    redirect_to clients_path,
 	    notice: "You succesfully logged out"
-	 end
+	end
 
 
 end
