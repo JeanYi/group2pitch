@@ -12,4 +12,5 @@ resources :trainers, controller: "trainers"
 
   delete "/sign_out" => "sessions#destroy", as: "sign_out"
   patch "/clients" => "clients#update"
+  patch "/listings" => "listings#update"
 end

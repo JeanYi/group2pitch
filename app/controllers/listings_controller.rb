@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
 
 	def index
-		@listing = Listing.all
+		@listing = Listing.order(:name).page(params[:page]).per(2)
 	end
 
 	def new
@@ -18,10 +18,21 @@ class ListingsController < ApplicationController
 	end
 
 	def show
-		
+		@listing = Listing.find(params[:id])
 	end
 
+	def edit
+		@listing = Listing.find(params[:id])
+	end
 
+	def update
+		@listing = Listing.find(params[:id])
+		if @listing.update(listing_params)
+			redirect_to listings_path
+		else
+			render 'edit'
+		end
+	end
 
 	private
 
