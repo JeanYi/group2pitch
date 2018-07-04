@@ -1,0 +1,9 @@
+<h3>Fuck</h3>
+
+<% @listing.each do |l| %>
+
+	<h4>Name: <%= l.name %><br></h4>
+	<h4>Desc: <%= l.short_desc %><br></h4>
+	<h4>Date: <%= l.start_date %> to <%= l.end_date %><br></h4>
+
+<% end %>
