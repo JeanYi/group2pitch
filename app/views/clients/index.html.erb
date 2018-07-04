@@ -1,2 +1,5 @@
 <h3>jfdjdsjfslifjs</h3>
 
+<% if current_client %>
+<li><%= link_to t(".sign_out"), sign_out_path, method: :delete %></li>
+<% end %>	
