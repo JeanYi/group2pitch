@@ -2,10 +2,13 @@ Rails.application.routes.draw do
 
 root 'trainers#new'
 
-resources :trainers, controller: "trainers"
-resources :clients
+resources :trainers
 resources :listings
-resources :enquiries
+  
+resources :clients do 
+  	resources :enquiries
+    end
+ 
 
   get "/sign_in_trainer" => "sessions#new_trainer", as: "sign_in_trainer"
   delete "/sign_out_trainer" => "sessions#destroy_trainer", as: "sign_out_trainer"

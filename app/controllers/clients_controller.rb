@@ -10,6 +10,7 @@ class ClientsController < ApplicationController
 	def create
 		@client = Client.new(client_params)
 		if @client.save 
+			UserMailer.welcome_email(@client).deliver_now
 			redirect_to clients_path
 		else
 			render "new"
