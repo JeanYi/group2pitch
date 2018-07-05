@@ -1,6 +1,7 @@
 class ClientsController < ApplicationController
 
 	def index	
+
 	end
 
 	def new
@@ -11,7 +12,7 @@ class ClientsController < ApplicationController
 		@client = Client.new(client_params)
 		if @client.save 
 			UserMailer.welcome_email(@client).deliver_now
-			redirect_to clients_path
+			redirect_to root_path
 		else
 			render "new"
 		end
