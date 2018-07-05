@@ -1,6 +1,11 @@
 class TrainersController < ApplicationController
 
+def index
+  @trainers = Trainer.all
+end
+
 def show
+  @trainer = Trainer.find(params[:id])
 end
 
 def new
@@ -26,14 +31,14 @@ def update
        redirect_to root_path
          else render "edit"
     end
-end 
+end
 
 def destroy
-    @trainer = Trainer.find(params[:id]) 
+    @trainer = Trainer.find(params[:id])
       if @trainer.destroy
         redirect_to root_path
       else
-        redirect_to edit_trainer_path 
+        redirect_to edit_trainer_path
       end
 end
 
