@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-	
 	# Sign_in page for client 
 	def new
 	end
