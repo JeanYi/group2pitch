@@ -1,4 +1,4 @@
 class Listing < ApplicationRecord
-	belongs_to :trainer
+	belongs_to :trainer ,optional:true
 	belongs_to :client
 end
