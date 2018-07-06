@@ -5,8 +5,8 @@ root 'trainers#new'
 resources :trainers 
 resources :listings
 resources :clients do
-  	resources :enquiries
-    end
+  resources :enquiries
+end
 
 
   get "/sign_in_trainer" => "sessions#new_trainer", as: "sign_in_trainer"
