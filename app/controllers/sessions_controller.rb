@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-	
 	# Sign_in page for client 
 	def new
 	end
@@ -16,7 +15,7 @@ class SessionsController < ApplicationController
 
   	def destroy
 	    session[:client_id] = nil
-	    redirect_to new_session_path,
+	    redirect_to sign_in_path,
 	    notice: "You succesfully logged out"
 	end
 
