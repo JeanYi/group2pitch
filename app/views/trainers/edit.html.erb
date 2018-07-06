@@ -5,7 +5,7 @@
  <%= f.label :first_name %>:
  <%= f.text_field :first_name %><br />
 
- <%= f.label :last_name %>:
+ <%= f.label :last_name %>:'
  <%= f.text_field :last_name %><br />
 
  <%= f.label :email %>
@@ -30,5 +30,6 @@
   <%= f.text_field :rate_per_day %></br>
 
  <%= f.submit %>
- 
 <% end %>
+
+<%= button_to "delete", @trainer, :method => :delete %>

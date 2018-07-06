@@ -1,0 +1,6 @@
+<h1> Hello, <%=@trainer.first_name%></h1>
+
+<%=@trainer.skills%>
+
+<%= button_to 'Delete', trainer_path, method: :delete, data: {confirm: 'Are you sure?'} %></br>
+<%= button_to 'Edit', edit_trainer_path %>
