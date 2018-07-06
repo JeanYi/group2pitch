@@ -26,6 +26,13 @@
 	<%= form.text_field :password, type: 'password'%>
 </div>
 
+<div class ="competency">
+	<%= form.label :competency %>
+	<%= form.select(:competency, Trainer.competencies.keys.map {|competency|[competency.titleize,competency]})%>
+</div>
+
+
+
 <div class ="submit-field">
 	<%= form.submit %>
 </div>

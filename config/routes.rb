@@ -2,9 +2,8 @@ Rails.application.routes.draw do
 
 root 'trainers#new'
 
-resources :trainers
+resources :trainers 
 resources :listings
-
 resources :clients do
   	resources :enquiries
     end

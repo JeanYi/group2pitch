@@ -1,8 +1,20 @@
 class EnquiriesController < ApplicationController
 
 	before_action :authorize 
-	def index
+	
 
+	def index
+		@client = Client.find(params[:client_id])
+		if @client.admin? 
+
+			@enquiry= Enquiry.order(:subject_one).page(params[:page]).per(1)
+		else
+			redirect_to clients_path
+		end
+	end
+
+	def show
+		@enquiry = Enquiry.find(params[:id])	
 	end
 
 	def new
@@ -20,6 +32,9 @@ class EnquiriesController < ApplicationController
 			render "new"
 		end
 	end
+
+	
+
 
 	private
 

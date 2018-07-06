@@ -29,6 +29,11 @@
   <%= f.label :rate_per_day %>
   <%= f.text_field :rate_per_day %></br>
 
+  <div class ="competency">
+	<%= form.label :competency %>
+	<%= form.select(:competency, Trainer.competencies.keys.map {|competency|[competency.titleize,competency]})%>
+  </div>
+
  <%= f.submit %>
 <% end %>
 

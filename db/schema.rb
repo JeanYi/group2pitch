@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_04_093123) do
+ActiveRecord::Schema.define(version: 2018_07_05_104659) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2018_07_04_093123) do
     t.string "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "role", default: 0
   end
 
   create_table "enquiries", force: :cascade do |t|
@@ -49,6 +50,10 @@ ActiveRecord::Schema.define(version: 2018_07_04_093123) do
     t.date "start_date"
     t.date "end_date"
     t.string "venue"
+    t.bigint "client_id"
+    t.bigint "trainer_id"
+    t.index ["client_id"], name: "index_listings_on_client_id"
+    t.index ["trainer_id"], name: "index_listings_on_trainer_id"
   end
 
   create_table "trainers", force: :cascade do |t|
@@ -65,6 +70,9 @@ ActiveRecord::Schema.define(version: 2018_07_04_093123) do
     t.date "birthday"
     t.date "start_date"
     t.integer "rate_per_day"
+    t.integer "competency", default: 0
   end
 
+  add_foreign_key "listings", "clients"
+  add_foreign_key "listings", "trainers"
 end
