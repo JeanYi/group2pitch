@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 #Bootstrap gem 
 gem 'bootstrap', '~> 4.1.1'
+
+
 #JQuery gem 
 gem 'jquery-rails'
 #Sprocket gem to make bootstrap gem work 

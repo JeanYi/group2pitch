@@ -15,7 +15,6 @@ class ListingsController < ApplicationController
 			@listing = current_client.listings.new(listing_params)
 			# @listing.trainers = 
 			if @listing.save
-				
 				redirect_to root_path
 			else
 				

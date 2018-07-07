@@ -1,0 +1,47 @@
+<h3>Static Listing Form</h3>
+
+<%= form_for @static_listing , url:static_listings_path do |f| %>
+
+	<p>
+		<%=f.label "title" %><br>
+		<%=f.text_field :title%>		
+	</p>
+
+	<p>
+		<%=f.label "venue" %><br>
+		<%=f.text_field :venue %>		
+	</p>
+	<p>
+		<%=f.label "description" %><br>
+		<%=f.text_field :description %>		
+	</p>
+	<p>
+		<%=f.label "budget" %><br>
+		<%=f.text_field :budget %>		
+	</p>
+	<p>
+		<%=f.label "pax" %><br>
+		<%=f.text_field :pax %>		
+	</p>
+	<p>
+		<%=f.label "audience" %><br>
+		<%=f.text_field :audience %>		
+	</p>	
+	<p>
+		<%=f.label "requirement" %><br>
+		<%=f.text_field :requirement %>		
+	</p>
+	<p>
+		<%=f.label "duration" %><br>
+		<%=f.text_field :duration %>		
+	</p>
+	<p>
+		<%=f.label "image" %><br>
+		<%=f.file_field :image %>		
+	</p>
+
+	<p>
+		<%=f.submit%>
+	</p>
+
+<%end%>

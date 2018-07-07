@@ -13,5 +13,10 @@ class UserMailer < ApplicationMailer
 		
 	end
 
+	def enquiry_email_delayed(client)
+		@client = client
+		mail to: client.email, subject: "This is your quotation"
+	end
+
 
 end

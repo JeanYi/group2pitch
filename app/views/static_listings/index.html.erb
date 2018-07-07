@@ -1,0 +1,21 @@
+<h3>List of Static Listing</h3>
+
+
+	<% @static_listing.each do |l| %>
+
+		<% if l.image.present? %>
+			<%= image_tag l.image.url(:thumb) %>
+			<% else %>
+			<%= image_tag "UK.jpg", style:"width:100px" %>
+		<% end %>
+		<h4>Title: <%= l.title %><br></h4>
+		<h4>Desc: <%= l.description %><br></h4>
+		<h4>Date: <%= l.duration %><br></h4>
+		<%=link_to "Show", static_listing_path(l)%>
+
+
+<% end %>
+
+<%= paginate @static_listing %>	
+<%= page_entries_info @static_listing %>
+

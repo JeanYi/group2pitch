@@ -3,3 +3,4 @@
 <h4>Description of workshop: <%= @listing.long_desc %><br></h4>
 <h4>Duration of workshop: <%= @listing.start_date %> to <%= @listing.end_date %><br></h4>
 <h4>Venue: <%= @listing.venue %></h4>
+<%=link_to "pay here", braintree_new_path%>
