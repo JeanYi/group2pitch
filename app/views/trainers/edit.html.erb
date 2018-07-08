@@ -29,6 +29,12 @@
   <%= f.label :rate_per_day %>
   <%= f.text_field :rate_per_day %></br>
 
+  <div class ="competency">
+	<%= f.label :competency %>
+	<%= f.select(:competency, Trainer.competencies.keys.map {|competency|[competency.titleize,competency]})%>
+  </div>
+
  <%= f.submit %>
- 
 <% end %>
+
+<%= button_to "delete", @trainer, :method => :delete %>

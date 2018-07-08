@@ -1,1 +1,15 @@
-<h3>Something<h3>
+<h1>Welcome Dear Admin</h1>
+<h3>These are the list of enquiries</h3>
+
+<%= paginate @enquiry %>
+
+<%@enquiry.each do |e|%>
+
+<%=e.client.first_name%><br>
+<%=e.client.email%><br>
+<%=e.venue%><br>
+<%=link_to "enquiry", client_enquiry_path(@client,e)%>
+
+
+<%end%>
+

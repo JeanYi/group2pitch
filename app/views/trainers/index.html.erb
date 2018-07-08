@@ -1,5 +1,9 @@
 <h1>This is the index page for trainers </h1>
 
+<% @trainers.each do |t| %>
+	<%= t.id %><%= t.first_name %></br>
+<% end %>
+
 <% if current_trainer %>
     <%= button_to "Sign Out", sign_out_trainer_path, method: :delete, data: {confirm: "Are you sure?"} %>
-<% end %> 
+<% end %>

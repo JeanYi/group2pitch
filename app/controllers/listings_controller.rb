@@ -9,11 +9,20 @@ class ListingsController < ApplicationController
 	end
 
 	def create
-		@listing = Listing.new(listing_params)
-		if @listing.save
-			redirect_to listings_path
+		if current_client.admin?
+			
+
+			@listing = current_client.listings.new(listing_params)
+			# @listing.trainers = 
+			if @listing.save
+				redirect_to root_path
+			else
+				
+				render "new"
+			end
 		else
-			render "new"
+			
+			redirect_to root_path		
 		end
 	end
 
@@ -37,7 +46,7 @@ class ListingsController < ApplicationController
 	private
 
 	def listing_params
-		params.require(:listing).permit(:name, :short_desc, :long_desc, :start_date, :end_date, :venue)
+		params.require(:listing).permit(:name, :short_desc, :long_desc, :start_date, :end_date, :venue, :trainer_id, :client_id)
 	end
 
 end

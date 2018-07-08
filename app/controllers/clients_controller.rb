@@ -3,6 +3,9 @@ class ClientsController < ApplicationController
 	def index	
 	end
 
+      def show
+      end
+
 	def new
 		@client = Client.new
 	end
@@ -11,7 +14,7 @@ class ClientsController < ApplicationController
 		@client = Client.new(client_params)
 		if @client.save 
 			UserMailer.welcome_email(@client).deliver_now
-			redirect_to clients_path
+			redirect_to root_path
 		else
 			render "new"
 		end
@@ -37,11 +40,6 @@ class ClientsController < ApplicationController
 	private
 
 	def client_params
-		params.require(:client).permit(:first_name, :last_name, :name_of_company, :designation, :email, :password, :phone_number)
+		params.require(:client).permit(:first_name, :last_name, :name_of_company, :designation, :email, :password, :phone_number, :image)
 	end
-  
-
-
-
-
 end

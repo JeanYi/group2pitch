@@ -1,5 +1,10 @@
 <h3>My Profile Page</h3>
 
+<% if @client.image.present? %>
+	<%= image_tag @client.image.url(:thumb) %>
+<% else %>
+	<%= image_tag "UK.jpg", style:"width:100px" %>
+<% end %>
 <h4>First Name: <%=@client.first_name%><br></h1>
 <h4>Last Name: <%=@client.last_name%><br>
 <h4>Email: <%=@client.email%><br>
