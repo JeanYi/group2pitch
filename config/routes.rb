@@ -4,12 +4,14 @@ root 'pages#index'
 
 resources :static_listings
 resources :trainers 
-resources :listings
-resources :pages 
+resources :pages
+resources :listings, only: :index 
   
 resources :clients do 
-  	resources :enquiries 
+  	resources :enquiries do
+      resources :listings
     end
+  end
  
   get "/" => "pages#index" 
 
@@ -20,9 +22,7 @@ resources :clients do
   get "/sign_in" => "sessions#new", as: "sign_in"
   delete "/sign_out" => "sessions#destroy", as: "sign_out"
   post "/sessions" => "sessions#create" 
-  
   patch "/clients" => "clients#update"
-  patch "/listings" => "listings#update"
   get 'braintree/new'
   post 'braintree/checkout'
 

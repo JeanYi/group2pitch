@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_07_101816) do
+ActiveRecord::Schema.define(version: 2018_07_08_134446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,7 +56,9 @@ ActiveRecord::Schema.define(version: 2018_07_07_101816) do
     t.string "venue"
     t.bigint "client_id"
     t.bigint "trainer_id"
+    t.bigint "enquiry_id"
     t.index ["client_id"], name: "index_listings_on_client_id"
+    t.index ["enquiry_id"], name: "index_listings_on_enquiry_id"
     t.index ["trainer_id"], name: "index_listings_on_trainer_id"
   end
 
@@ -95,5 +97,6 @@ ActiveRecord::Schema.define(version: 2018_07_07_101816) do
   end
 
   add_foreign_key "listings", "clients"
+  add_foreign_key "listings", "enquiries"
   add_foreign_key "listings", "trainers"
 end

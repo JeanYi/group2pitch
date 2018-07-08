@@ -1,10 +1,11 @@
 class ClientsController < ApplicationController
 
 	def index	
+		@client = current_client
 	end
 
-      def show
-      end
+    def show
+    end
 
 	def new
 		@client = Client.new
