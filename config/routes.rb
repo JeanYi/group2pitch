@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 root 'trainers#new'
 
+
+resources :static_listings
 resources :trainers 
 resources :listings
 resources :clients do
@@ -17,5 +19,11 @@ end
   post "/sessions" => "sessions#create" 
   patch "/clients" => "clients#update"
   patch "/listings" => "listings#update"
+  get 'braintree/new'
+  post 'braintree/checkout'
+
+  
+
+  
 
 end

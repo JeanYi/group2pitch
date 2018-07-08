@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_05_133734) do
+ActiveRecord::Schema.define(version: 2018_07_07_101816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(version: 2018_07_05_133734) do
     t.string "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "role", default: 0
     t.string "image_file_name"
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
-    t.integer "role", default: 0
   end
 
   create_table "enquiries", force: :cascade do |t|
@@ -58,6 +58,23 @@ ActiveRecord::Schema.define(version: 2018_07_05_133734) do
     t.bigint "trainer_id"
     t.index ["client_id"], name: "index_listings_on_client_id"
     t.index ["trainer_id"], name: "index_listings_on_trainer_id"
+  end
+
+  create_table "static_listings", force: :cascade do |t|
+    t.string "venue"
+    t.string "description"
+    t.string "budget"
+    t.string "pax"
+    t.string "duration"
+    t.string "requirement"
+    t.string "audience"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.string "title"
   end
 
   create_table "trainers", force: :cascade do |t|
