@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Group2pitch</title>
+    <title> Curate your dream HR programs </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'%>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Karla" rel="stylesheet">
+
   </head>
-
   <body>
-    <%= yield %>
+
+  <!-- Nav Bar -->
+  <div class="navbar">
+    <div class="navbar-left"> <a href="/">Home</a> </div>
+    <div class="navbar-left"> <a href="#aboutus">About Us</a> </div>
+    <div class="navbar-left"> <a href="#aboutus">Contact Us</a> </div>
+    
+    <div class="dropdown">
+      <button class="dropbtn">Programme
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div> 
+    
+    <div class="navbar-right"><a href="#aboutus">Sign in</a> </div>
+    <div class="navbar-right"><a href="#aboutus">Get Started</a> </div>
+  </div>
+  <!-- End of Nav Bar -->
+
+  <%= yield %>
+
+
   </body>
 </html>
