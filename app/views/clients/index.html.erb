@@ -5,6 +5,6 @@
     <%= link_to "Profile", client_path(@client) %>
     <%= link_to "Enquiry", client_enquiries_path(@client) %>
     <%= link_to "Create Enquiry", new_client_enquiry_path(@client) %>
-    <%= link_to "Listing", listings_path %>
+    <%= link_to "Listing", client_enquiry_listings_path(@client, @enquiry) %>
 <% end %> 
 

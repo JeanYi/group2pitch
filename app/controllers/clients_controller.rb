@@ -2,6 +2,7 @@ class ClientsController < ApplicationController
 
 	def index	
 		@client = current_client
+		@enquiry = 1
 	end
 
     def show

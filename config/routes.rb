@@ -5,9 +5,8 @@ root 'pages#index'
 resources :static_listings
 resources :trainers 
 resources :pages
-resources :listings, only: :index 
   
-resources :clients do 
+resources :clients do
   	resources :enquiries do
       resources :listings
     end
@@ -23,8 +22,9 @@ resources :clients do
   delete "/sign_out" => "sessions#destroy", as: "sign_out"
   post "/sessions" => "sessions#create" 
   patch "/clients" => "clients#update"
-  get 'braintree/new'
-  post 'braintree/checkout'
+  get 'clients/:client_id/enquiries/:enquiry_id/listings/:id/braintree/new' => 'braintree#new', as: 'braintree_payment'
+  #post 'braintree/checkout'
+  post 'clients/:client_id/enquiries/:enquiry_id/listings/:id/braintree/checkout' => 'braintree#checkout', as: 'payment_checkout'
 
   
 end
