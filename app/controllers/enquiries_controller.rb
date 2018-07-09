@@ -6,7 +6,7 @@ class EnquiriesController < ApplicationController
 	def index
 		@client = Client.find(params[:client_id])
 		if @client.admin? 
-			@enquiry= Enquiry.order(:subject_one).page(params[:page]).per(1)
+			@enquiry= Enquiry.order(:id).page(params[:page]).per(1)
 		else
 			redirect_to clients_path
 		end

@@ -3,7 +3,7 @@ class ListingsController < ApplicationController
 	def index
 		@client = Enquiry.find(params[:client_id])
 		@enquiry = Enquiry.find(params[:enquiry_id])
-		@listing = Listing.order(:name).page(params[:page]).per(2)
+		@listing = Listing.order(:id).page(params[:page]).per(2)
 	end
 
 	def new
