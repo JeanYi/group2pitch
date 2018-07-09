@@ -14,7 +14,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Karla" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Karla|Montserrat" rel="stylesheet">
 
   </head>
   <body>
@@ -30,9 +30,8 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="#">Make an enquiry</a>
+        <a href="#">Your history</a>
       </div>
     </div> 
      
@@ -45,10 +44,10 @@
       </button>
         <div class="dropdown-content-right">
         <% if current_trainer %>
-          <%= link_to "Sign Out", sign_out_trainer_path, method: :delete, data: { confirm: 'Are you sure?'} %>
+          <%= link_to "Sign Out", sign_out_trainer_path, method: :delete %> 
           <a href="#">Edit Profile </a>
         <% else %> 
-          <%= link_to "Sign Out", sign_out_path, method: :delete, data: { confirm: 'Are you sure?'} %>
+          <%= link_to "Sign Out", sign_out_path, method: :delete %> 
           <a href="#">Edit Profile </a>
         <% end %> 
           <a href="/sign_in_trainer">Login as Trainer </a>
