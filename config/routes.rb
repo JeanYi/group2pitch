@@ -13,7 +13,9 @@ resources :clients do
   end
  
   get "/" => "pages#index" 
+  get "/get_started" => "pages#getstarted"
 
+  # CUSTOM ROUTES FOR SESSIONS 
   get "/sign_in_trainer" => "sessions#new_trainer", as: "sign_in_trainer"
   delete "/sign_out_trainer" => "sessions#destroy_trainer", as: "sign_out_trainer"
   post "/sessions_trainer" => "sessions#create_trainer" 
@@ -23,8 +25,11 @@ resources :clients do
   post "/sessions" => "sessions#create" 
   patch "/clients" => "clients#update"
   get 'clients/:client_id/enquiries/:enquiry_id/listings/:id/braintree/new' => 'braintree#new', as: 'braintree_payment'
-  #post 'braintree/checkout'
   post 'clients/:client_id/enquiries/:enquiry_id/listings/:id/braintree/checkout' => 'braintree#checkout', as: 'payment_checkout'
-
+  patch "/listings" => "listings#update"
   
+  # CUSTOM ROUTES FOR BRAINTREE
+  get 'braintree/new'
+  post 'braintree/checkout'
+
 end

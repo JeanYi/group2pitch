@@ -95,3 +95,148 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* The dropdown container */
+.dropdown-right {
+  float: right;
+  overflow: hidden;
+  text-decoration:none;
+  text-align: center;
+}
+
+/* Dropdown button */
+.dropdown-right .dropbtn {
+  font-size: 20px; 
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content-right {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content-right a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content-right a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-right:hover .dropdown-content-right {
+  display: block;
+}
+
+/*Footer*/
+
+.footer-container {
+  border-top: 1px solid grey;
+}
+
+.foot-links {
+  margin-left:40%;
+  padding-left: 30px;
+  padding: 0;
+  margin-left: 30px;
+  margin-right:30px;
+  display: inline-block;
+  width:200px; 
+  float:right;
+}
+
+#footer .footer-links li {
+  padding: 2px;
+  margin: 0;
+  list-style: none;
+}
+
+#footer .footer-links li a {
+  color: #000;
+  text-decoration: none;
+}
+
+#footer .footer-links li a:hover {
+  text-decoration: blue;
+}
+
+.widget {
+  margin-bottom: 30px;
+  padding-left: 40px;
+  text-decoration: none;
+  display: inline-block;
+  width:800px;
+}
+
+.widget a {
+  text-decoration: none;
+}
+
+#footer .widget h3 {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#footer .copyright .block {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+}
+
+.social-icons {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.social-icons li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+}
+
+.social-icons li a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+  color: #00CED1;
+  padding-left: 10px;
+  padding-right: 10px;
+ 
+}
+
+.social-icons li a i {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  #footer {
+    text-align: left;
+  }
+}
