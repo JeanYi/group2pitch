@@ -5,12 +5,11 @@
    </head>
    
    <body>
-      <h1>Welcome to fsd.com, <%= @client.first_name %></h1>
+      <h1>Welcome to fsd.com, <%= @enquiry.client.first_name %></h1>
       
       <p>This is your final quotation.</p>
-      <p>Very Much Thanks</p>
-      <p>MOney PLease!</p>
-      <%= link_to "Please click", listings_url %>
-      
+      <p><%= @listing.name %>
+
+      <%= link_to "Please click", client_enquiry_listing_url(@client.id, @enquiry.id, @listing.id) %>
    </body>
 </html>

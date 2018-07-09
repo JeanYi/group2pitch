@@ -48,6 +48,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem "paperclip", "~> 6.0.0"
+gem 'popper_js', '~> 1.12.9'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -2,4 +2,11 @@
 
 <% if current_client %>
     <%= button_to "Sign Out", sign_out_path, method: :delete, data: {confirm: "Are you sure?"} %>
+    <%= link_to "Profile", client_path(@client) %>
+    <%= link_to "Create Enquiry", new_client_enquiry_path(@client) %>
+    <%= link_to "Listing", client_enquiry_listings_path(@client, @enquiry) %>
+    <% if current_client.admin? %>
+    	<%= link_to "Enquiry", client_enquiries_path(@client) %>
+    <% end %>
 <% end %> 
+

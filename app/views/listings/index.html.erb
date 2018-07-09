@@ -6,9 +6,9 @@
 		<h4>Name: <%= l.name %><br></h4>
 		<h4>Desc: <%= l.short_desc %><br></h4>
 		<h4>Date: <%= l.start_date %> to <%= l.end_date %><br></h4>
+		<%=link_to "Show Listing", client_enquiry_listing_path(@client, @enquiry, l) %>
 
-
-<% end %>
+	<% end %>
 
 <%= paginate @listing %>	
 <%= page_entries_info @listing %>

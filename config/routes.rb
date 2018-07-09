@@ -4,12 +4,13 @@ root 'pages#index'
 
 resources :static_listings
 resources :trainers 
-resources :listings
-resources :pages 
+resources :pages
   
-resources :clients do 
-  	resources :enquiries 
+resources :clients do
+  	resources :enquiries do
+      resources :listings
     end
+  end
  
   get "/" => "pages#index" 
   get "/get_started" => "pages#getstarted"
@@ -22,12 +23,13 @@ resources :clients do
   get "/sign_in" => "sessions#new", as: "sign_in"
   delete "/sign_out" => "sessions#destroy", as: "sign_out"
   post "/sessions" => "sessions#create" 
-  
   patch "/clients" => "clients#update"
+  get 'clients/:client_id/enquiries/:enquiry_id/listings/:id/braintree/new' => 'braintree#new', as: 'braintree_payment'
+  post 'clients/:client_id/enquiries/:enquiry_id/listings/:id/braintree/checkout' => 'braintree#checkout', as: 'payment_checkout'
   patch "/listings" => "listings#update"
   
   # CUSTOM ROUTES FOR BRAINTREE
   get 'braintree/new'
   post 'braintree/checkout'
-  
+
 end
