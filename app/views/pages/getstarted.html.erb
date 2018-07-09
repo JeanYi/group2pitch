@@ -1,0 +1,30 @@
+<!DOCTYPE html>	
+<html>
+  <head>
+  </head>
+
+  <body>
+
+  	<!-- Sign Up Container -->
+
+  	<div class="background-container">
+  		<div class="trainer-container">
+  			<img src= "/assets/trainer_get_started.jpg" style="">
+  			<div class="para"> Are you interested to join us as a trainer? </div>        
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" > Sign Up </button>
+
+        <%= render partial: '/trainers/new' %> 
+
+      </div>
+
+  		<div class="clients-container">
+  			<img src= "/assets/client_get_started.jpg" style="">
+  			<div class="para"> Create an account to personalize your company's HR courses </div>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Sign Up</button>
+
+  	 </div>
+
+    </div>
+
+  </body>
+ </html>
