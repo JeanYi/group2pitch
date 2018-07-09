@@ -1,13 +1,25 @@
-<h1>Please sign in</h1>
+<%= form_tag sessions_path, html: {class: "form"} do %> 
 
-<%= form_tag sessions_path do %>
-<%= text_field_tag :email, nil, placeholder: "input client email" %> 
-<%= password_field_tag :password , nil, placeholder: "input password"%>
-<%= submit_tag "Sign in"%>
+<div class="login-form">
 
-<% end %>
+    <h1> Welcome back </h1> 
 
-<% if current_client %>
-    <%= button_to "Sign Out", sign_out_path, method: :delete, data: {confirm: "Are you sure?"} %>
-<% end %> 
+      <p class="login-text">
+        <span class="fa-stack">
+          <i class="far fa-circle fa-stack-2x"></i>
+          <i class="fas fa-unlock-alt fa-stack-1x"></i>
+        </span>
+      </p>
 
+    <div class="label"> 
+      <%= text_field_tag :email, nil, placeholder: 'Email address'%> 
+    </div> 
+
+    <div class="label"> 
+      <%= password_field_tag :password , nil, placeholder: 'Password'%>
+    </div>
+    
+    <%= submit_tag "Sign in", class: "signinbtn" %>
+
+</div>
+<% end %>  

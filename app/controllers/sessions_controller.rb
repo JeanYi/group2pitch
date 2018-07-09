@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 		client = Client.find_by_email(params[:email])
 			if client && client.authenticate(params[:password])
 				session[:client_id] = client.id
-  				redirect_to clients_path, notice: "welcome #{client.first_name}, you have succesfully have signed in"
+  				redirect_to root_path 
   			else
   				render "new" , alert: "User Id And or Password Invalid"
   			end
@@ -17,8 +17,7 @@ class SessionsController < ApplicationController
   	# Sign_out page for client 
   	def destroy
 	    session[:client_id] = nil
-	    redirect_to root_path,
-	    notice: "You succesfully logged out"
+	    redirect_to root_path
 	end
 
 
@@ -31,7 +30,7 @@ class SessionsController < ApplicationController
 		trainer = Trainer.find_by_email(params[:email])
 		if trainer && trainer.authenticate(params[:password])
 			session[:trainer_id] = trainer.id
-			redirect_to trainers_path, notice: "welcome #{trainer.first_name}, you have succesfully have signed in"
+			redirect_to root_path
 		else 
 			render "new_trainer", alert: "User Id And or Password Invalid"
 		end 
@@ -40,8 +39,7 @@ class SessionsController < ApplicationController
   	# Destory session for trainer 
 	def destroy_trainer 
 	    session[:trainer_id] = nil
-	    redirect_to root_path,
-	    notice: "You succesfully logged out"
-  	end 
+	    redirect_to root_path
+	end 
 
 end
