@@ -15,7 +15,8 @@ end
 def create
 	@trainer = Trainer.new(trainers_params)
 	if @trainer.save
-		redirect_to root_path
+		session[:trainer_id] = @trainer.id
+		redirect_to root_path 
 	else
 		render 'new'
 	end

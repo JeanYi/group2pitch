@@ -35,14 +35,78 @@
         <a href="#">Link 3</a>
       </div>
     </div> 
+     
+
+    <div class="navbar-right"><a href="/get_started">Get Started</a> </div>
+
+    <div class="dropdown-right">
+      <button class="dropbtn"> 
+        <i class="far fa-smile-beam" style="font-size:30px;"></i>
+      </button>
+        <div class="dropdown-content-right">
+        <% if current_trainer %>
+          <%= link_to "Sign Out", sign_out_trainer_path, method: :delete, data: { confirm: 'Are you sure?'} %>
+          <a href="#">Edit Profile </a>
+        <% else %> 
+          <%= link_to "Sign Out", sign_out_path, method: :delete, data: { confirm: 'Are you sure?'} %>
+          <a href="#">Edit Profile </a>
+        <% end %> 
+          <a href="/sign_in_trainer">Login as Trainer </a>
+          <a href="/sign_in">Login as Client </a>
+      </div>
+    </div> 
     
-    <div class="navbar-right"><a href="#aboutus">Sign in</a> </div>
-    <div class="navbar-right"><a href="#aboutus">Get Started</a> </div>
+
   </div>
   <!-- End of Nav Bar -->
 
   <%= yield %>
 
+  <!-- Footer container -->
+
+  <footer id="footer">
+
+    <div class="footer-container">
+
+        <div class="widget">
+          <h3>HR Program Curators .</h3>
+          <p> We aim to provide you with the finest training courses in Malaysia </p>
+          <p><a href="#">Learn More</a></p>
+        </div>
+
+        <div class="foot-links">
+          <ul class="footer-links">
+            <li><a href="#">Payment Terms </a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </div>
+
+        <div class="foot-links">
+          <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+    </div>
+
+      <div class="row copyright">
+          <p>
+            <small class="block">&copy; 2018 HR Program Curators Pitch. All Rights Reserved.</small> 
+          </p>
+          <p>
+            <ul class="social-icons">
+              <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+          </p>
+      </div>
+  </footer>
+  
 
   </body>
 </html>
