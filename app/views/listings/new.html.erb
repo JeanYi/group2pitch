@@ -1,42 +1,134 @@
-<h2>Create Listings </h2>
+<style> 
+
+body {font-family: Karla, sans-serif;}
+
+input[type=date], input[type=number] {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-size: 15px;
+}
+
+form input[type='text']{
+	width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    resize: vertical;  
+    background-color:white;
+    font-size: 15px;  
+}
+
+textarea {
+	width: 100%;
+	height: 200px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;  
+    background-color:white;  
+    font-size: 15px;
+}
+
+input[type=submit] {
+    background-color:#696969;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+input[type=submit]:hover {
+    background-color: #000000;
+}
+
+.enquiry-container {
+    border-radius: 20px;
+    background-color: #F08080;
+    padding: 20px;
+    display:flex;
+	flex-direction: column;
+	height:80%;
+	width:60%;
+	margin:40px auto 40px;
+}
+
+.enquiry-container h1 {
+	text-align:center;
+	margin:auto
+	font-size: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+</style>
+
+<div class="enquiry-container">
+
+<h1> Create Quotation </h1> <b> 
 
 <%= form_for @listing , url:client_enquiry_listings_path do |f| %>
 
-	<p>
-		<%=f.label "workshop name" %><br>
-		<%=f.text_field :name %>		
-	</p>
+		<div class ="quotation">
+			<%=f.label "workshop 1" %><br>
+			<%=f.text_field :name %>		
+		</div>
 
-	<p>
-		<%=f.label "short desc" %><br>
-		<%=f.text_field :short_desc %>		
-	</p>
+		<div class ="quotation">
+			<%=f.label "workshop 2" %><br>
+			<%=f.text_field :name_two %>		
+		</div>
 
-	<p>
-		<%=f.label "long desc" %><br>
-		<%=f.text_field :long_desc %>		
-	</p>
+		<div class ="quotation">
+			<%=f.label "Notes" %><br>
+			<%=f.text_area :short_desc %>		
+		</div>
 
-	<p>
-		<%=f.label "start date" %><br>
-		<%=f.date_field :start_date %>		
-	</p>
+		<div class ="quotation">
+			<%=f.label "start date" %><br>
+			<%=f.date_field :start_date %>		
+		</div>
 
-	<p>
-		<%=f.label "end date" %><br>
-		<%=f.date_field :end_date %>		
-	</p>
 
-	<p>
-		<%=f.label "venue" %><br>
-		<%=f.text_field :venue %>		
-	</p>
+		<div class ="quotation">
+			<%=f.label "end date" %> <br>
+			<%=f.date_field :end_date %>		
+		</div>
 
-	<p>
-		<%=f.label "trainer" %><br>
-		<%=f.text_field :trainer_id %>
-	</p>
-	
-	<%= f.submit %>
+        <div class ="quotation">
+            <%=f.label "Price" %> RM <br>
+            <%=f.number_field :price %>        
+        </div>
 
-<% end %>
+		<div class ="quotation">
+			<%=f.label "venue" %><br>
+			<%=f.text_field :venue %>		
+		</div>
+
+         <input type="hidden" name="enquiry_id" value="<%=@enquiry.id%>">
+
+	   	<%= f.submit:"Send to client", class: "btn-submit" %>
+
+<% end %> 
+
+</div>

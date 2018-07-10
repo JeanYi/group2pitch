@@ -21,12 +21,18 @@ th, td {
 }
 
 th {
-	background-color: #B0E0E6
+	 background-color: #B0E0E6
 }
 
 tr:nth-child(even) {
     background-color: #f2f2f2
 }
+
+.paginate {
+  padding: 20px;
+  font-size: 25px;
+}
+
 </style>
 
 </head>
@@ -60,6 +66,9 @@ tr:nth-child(even) {
 </table>
 <br>
 </div>
+
+<div class="paginate"> <%= paginate @enquiry %> </div>
+
 </body>
 </html>
 
