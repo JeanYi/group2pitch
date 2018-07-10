@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
       end
    end	
 
+
 private
 	def current_client
 		@current_client ||= Client.find(session[:client_id]) if session[:client_id]

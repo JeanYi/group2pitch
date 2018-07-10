@@ -25,7 +25,7 @@ body {
 }
  
 /* Navbar container */
-.navbar {
+.x-navbar {
   overflow: hidden;
   background-color: #333;
   font-family: 'Karla', sans-serif;
@@ -34,7 +34,7 @@ body {
 }
 
 /* Links inside the navbar on the left side */
-.navbar-left a {
+.x-navbar-left a {
   float: left;
   font-size: 20px;
   color: white;
@@ -44,7 +44,7 @@ body {
 }
 
 /* Links inside the navbar on the right side */
-.navbar-right a {
+.x-navbar-right a {
   float: right;
   font-size: 20px;
   color: white;
@@ -54,13 +54,13 @@ body {
 }
 
 /* The dropdown container */
-.dropdown {
+.x-dropdown {
   float: left;
   overflow: hidden;
 }
 
 /* Dropdown button */
-.dropdown .dropbtn {
+.x-dropdown .x-dropbtn {
   font-size: 20px; 
   border: none;
   outline: none;
@@ -72,12 +72,12 @@ body {
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.x-navbar a:hover, .x-dropdown:hover .x-dropbtn {
   background-color: none;
 }
 
 /* Dropdown content (hidden by default) */
-.dropdown-content {
+.x-dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -87,7 +87,7 @@ body {
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
+.x-dropdown-content a {
   float: none;
   color: black;
   padding: 12px 16px;
@@ -97,17 +97,17 @@ body {
 }
 
 /* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
+.x-dropdown-content a:hover {
   background-color: #ddd;
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.x-dropdown:hover .x-dropdown-content {
   display: block;
 }
 
 /* The dropdown container */
-.dropdown-right {
+.x-dropdown-right {
   float: right;
   overflow: hidden;
   text-decoration:none;
@@ -115,7 +115,7 @@ body {
 }
 
 /* Dropdown button */
-.dropdown-right .dropbtn {
+.x-dropdown-right .x-dropbtn {
   font-size: 20px; 
   border: none;
   outline: none;
@@ -127,7 +127,7 @@ body {
 }
 
 /* Dropdown content (hidden by default) */
-.dropdown-content-right {
+.x-dropdown-content-right {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -137,7 +137,7 @@ body {
 }
 
 /* Links inside the dropdown */
-.dropdown-content-right a {
+.x-dropdown-content-right a {
   float: none;
   color: black;
   padding: 12px 16px;
@@ -147,18 +147,18 @@ body {
 }
 
 /* Add a grey background color to dropdown links on hover */
-.dropdown-content-right a:hover {
+.x-dropdown-content-right a:hover {
   background-color: #ddd;
 }
 
 /* Show the dropdown menu on hover */
-.dropdown-right:hover .dropdown-content-right {
+.x-dropdown-right:hover .x-dropdown-content-right {
   display: block;
 }
 
 /*Footer*/
 
-#footer {
+#y-footer {
    bottom:0;
    width:100%;
    margin-top:auto;
@@ -167,12 +167,12 @@ body {
 
 }
 
-.footer-container {
+.y-footer-container {
   border-top: 1px solid grey;
 
 }
 
-.foot-links {
+.y-foot-links {
   margin-left:40%;
   padding-left: 30px;
   padding: 0;
@@ -183,22 +183,22 @@ body {
   float:right;
 }
 
-#footer .footer-links li {
+#y-footer .y-footer-links li {
   padding: 2px;
   margin: 0;
   list-style: none;
 }
 
-#footer .footer-links li a {
+#y-footer .y-footer-links li a {
   color: #fff;
   text-decoration: none;
 }
 
-#footer .footer-links li a:hover {
+#y-footer .y-footer-links li a:hover {
   text-decoration: blue;
 }
 
-.widget {
+.y-widget {
   margin-bottom: 30px;
   padding-left: 40px;
   text-decoration: none;
@@ -206,12 +206,12 @@ body {
   width:800px;
 }
 
-.widget a {
+.y-widget a {
   color:#fff;
   text-decoration: none;
 }
 
-#footer .widget h3 {
+#y-footer .y-widget h3 {
   margin-bottom: 15px;
   font-weight: bold;
   font-size: 15px;
@@ -220,24 +220,24 @@ body {
   color: #fff;
 }
 
-#footer .widget p {
+#y-footer .y-widget p {
   color: #fff;
 }
 
-#footer .copyright .block {
+#y-footer .y-copyright .y-block {
   display: block;
   text-align: center;
   font-size: 15px;
   color: #fff;
 }
 
-.social-icons {
+.y-social-icons {
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-.social-icons li {
+.y-social-icons li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -247,7 +247,7 @@ body {
   display: inline;
 }
 
-.social-icons li a {
+.y-social-icons li a {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
@@ -258,12 +258,12 @@ body {
  
 }
 
-.social-icons li a i {
+.y-social-icons li a i {
   font-size: 30px;
 }
 
 @media screen and (max-width: 768px) {
-  #footer {
+  #y-footer {
     text-align: left;
   }
 }

@@ -265,6 +265,10 @@ body {
   border-color: #FFC0CB transparent;
 }*/
 
+.pagination >.next,.pagination >.prev{
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .testimonial.two-selected {
     bottom: 0;

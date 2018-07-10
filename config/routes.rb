@@ -13,12 +13,13 @@ resources :pages
   
 resources :clients do
   	resources :enquiries do
-      resources :listings
+      resources :listings 
     end
   end
  
   get "/" => "pages#index" 
   get "/get_started" => "pages#getstarted"
+  get "/enquiries/history" => "listings#history", as: "history"
 
   # CUSTOM ROUTES FOR SESSIONS 
   get "/sign_in_trainer" => "sessions#new_trainer", as: "sign_in_trainer"
@@ -38,3 +39,4 @@ resources :clients do
   post 'braintree/checkout'
 
 end
+
