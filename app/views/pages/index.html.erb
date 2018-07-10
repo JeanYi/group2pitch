@@ -139,6 +139,10 @@
             </blockquote>
           </div>
   </div>
+  <%=form_tag search_static_listings_path, method: :get do%>
+          <%= text_field_tag :search, nil, placeholder: "Search" %>
+          <%=submit_tag "Search" %>
+        <%end%>
   <!-- End of testimonials container -->
 
   </body>
