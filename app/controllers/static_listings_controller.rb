@@ -24,10 +24,8 @@ class StaticListingsController < ApplicationController
 
 	end
 
-
-
 	def index
-		@static_listing = StaticListing.order(:venue).page(params[:page]).per(1)
+		@static_listing = StaticListing.order(:venue).page(params[:page]).per(6)
 	end
 
 	def show	
