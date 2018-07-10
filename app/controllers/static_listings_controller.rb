@@ -34,6 +34,14 @@ class StaticListingsController < ApplicationController
 		@static_listing = StaticListing.find(params[:id])
 	end
 
+	def search
+		if params[:search].blank?
+		@static_listings = StaticListing.all
+		else
+		@static_listings = StaticListing.search(params)	
+		end
+	end
+
 	private
 
 		def static_listing_params

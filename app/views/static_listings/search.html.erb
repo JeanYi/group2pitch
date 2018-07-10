@@ -1,0 +1,18 @@
+<% @static_listings.each do |static_listing| %>
+
+	<%static_listing.title%><br>
+	<%=static_listing.venue %><br>
+	<%=static_listing.description %><br>
+	<%=static_listing.budget %><br>
+	<%=static_listing.pax %><br>
+	<%=static_listing.duration %><br>
+	<%=static_listing.audience %><br>
+	<%=static_listing.requirement %><br>
+	<%= image_tag static_listing.image.url(:thumb) %>
+
+
+
+
+<%end%>
+
+

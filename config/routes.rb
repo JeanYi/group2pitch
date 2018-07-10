@@ -2,7 +2,12 @@ Rails.application.routes.draw do
 
 root 'pages#index'
 
-resources :static_listings
+resources :static_listings do 
+  collection do
+  get :search
+  end
+end 
+
 resources :trainers 
 resources :pages
   
