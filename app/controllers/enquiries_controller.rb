@@ -33,13 +33,11 @@ class EnquiriesController < ApplicationController
 		end
 	end
 
-	
-
 
 	private
 
 	def enquiry_params
-		params.require(:enquiry).permit(:subject_one, :subject_two, :budget, :start_date, :end_date, :venue, :client_id)
+		params.require(:enquiry).permit(:subject_one, :subject_two, :budget, :start_date, :end_date, :venue, :client_id, :remarks)
 	end
 	
 end

@@ -1,15 +1,67 @@
-<h1>Welcome Dear Admin</h1>
-<h3>These are the list of enquiries</h3>
+<html>
+<head>
+<style>
 
-<%= paginate @enquiry %>
+body {
+	font-family: Karla, sans-serif;
+	font-size: 18px;
+}
 
-<%@enquiry.each do |e|%>
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
 
-<%=e.client.first_name%><br>
-<%=e.client.email%><br>
-<%=e.venue%><br>
-<%=link_to "enquiry", client_enquiry_path(@client, e)%>
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
+th {
+	background-color: #B0E0E6
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+</style>
+
+</head>
+<body> 
+<div class="container">  
+  <h2> Welcome Dear Admin </h2>	
+  <h3> These are the enquiries submitted by clients </h3>                                        
+  <table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Enquiry ID </th>
+      <th>Client First Name</th>
+      <th>Client Last Name </th>
+      <th>Client Email </th>
+      <th>More Details</th>
+    </tr>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <% @enquiry.each do |e| %>
+        <td><%=e.id%></td>
+        <td><%=e.client.first_name%></td>
+        <td><%=e.client.last_name%></td>
+        <td><%=e.client.email%></td>
+        <td><%=link_to "Details", client_enquiry_path(@client, e)%></td>
+      </tr>
+    	<% end %>
+  </tbody>
+</table>
+<br>
+</div>
+</body>
+</html>
 
 
-<%end%>
 

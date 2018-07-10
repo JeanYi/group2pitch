@@ -30,7 +30,10 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="#">Make an enquiry</a>
+        <a href=""><%= link_to "Make an Enquiry", new_client_enquiry_path(current_client.id) %></a>
+        <% if current_client.admin? %> 
+        <a href=""><%= link_to "All Enquiries", client_enquiries_path(current_client.id) %></a>
+        <% end %> 
         <a href="#">Your history</a>
       </div>
     </div> 

@@ -1,37 +1,142 @@
-<h3>Enquiry Form</h3>
+<style> 
 
-<%= form_for @enquiry , url:client_enquiries_path do |f| %>
+body {font-family: Karla, sans-serif;}
 
-	<p>
-		<%=f.label "subject matter 1" %><br>
-		<%=f.text_field :subject_one %>		
-	</p>
+input[type=date], input[type=number] {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-size: 15px;
+}
 
-	<p>
-		<%=f.label "subject matter 2" %><br>
-		<%=f.text_field :subject_two %>		
-	</p>
+form input[type='text']{
+	width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    resize: vertical;  
+    background-color:white;
+    font-size: 15px;  
+}
 
-	<p>
-		<%=f.label "budget " %><br>
-		<%=f.number_field :budget %>		
-	</p>
+textarea {
+	width: 100%;
+	height: 200px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;  
+    background-color:white;  
+    font-size: 15px;
+}
 
-	<p>
-		<%=f.label "start date" %><br>
-		<%=f.date_field :start_date %>		
-	</p>
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
 
-	<p>
-		<%=f.label "end date" %><br>
-		<%=f.date_field :end_date %>		
-	</p>
+input[type=submit]:hover {
+    background-color: #45a049;
+}
 
-	<p>
-		<%=f.label "venue" %><br>
-		<%=f.text_field :venue %>		
-	</p>
+.enquiry-container {
+    border-radius: 20px;
+    background-color: #B0E0E6;
+    padding: 20px;
+    display:flex;
+	flex-direction: column;
+	height:80%;
+	width:60%;
+	margin:40px auto 40px;
+}
 
-	<%= f.submit %>
+.enquiry-container h1 {
+	text-align:center;
+	margin:auto
+	font-size: 15px;
+}
 
-<% end %>
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+</style>
+
+<div class="enquiry-container">
+
+<h1> Enquiry Form </h1> <b> 
+
+
+<%= form_for @enquiry , url: client_enquiries_path do |f| %>
+
+
+		<div class ="enquiries">
+			<%=f.label "subject 1" %><br>
+			<%=f.text_field :subject_one %>		
+		</div>
+
+		<div class ="enquiries">
+			<%=f.label "subject 2" %><br>
+			<%=f.text_field :subject_two %>		
+		</div>
+
+		<div class ="enquiries">
+			<%=f.label "venue" %><br>
+			<%=f.text_field :venue %>		
+		</div>
+
+		<div class ="enquiries">
+			<%=f.label "other remarks" %><br>
+			<%=f.text_area :remarks %>		
+		</div>
+
+
+		<div class ="enquiries">
+			<%=f.label "budget " %> (RM) <br>
+			<%=f.number_field :budget %>		
+		</div>
+
+		<div class ="enquiries">
+			<%=f.label "start date" %><br>
+			<%=f.date_field :start_date %>		
+		</div>
+
+		<div class ="enquiries">
+			<%=f.label "end date" %><br>
+			<%=f.date_field :end_date %>		
+		</div>
+
+	   	<%= f.submit:"Submit", class: "btn-submit" %>
+
+<% end %> 
+
+</div>
+
+
+
+
+
+
+
+

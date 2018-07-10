@@ -1,16 +1,71 @@
-<h3>This is an eqnuiry made by <%=@enquiry.client.first_name%></h3>
+<html>
+<head>
+<style>
 
-<%=@enquiry.subject_one%><br>
-<%=@enquiry.client.email%><br>
-<%=@enquiry.client.name_of_company%><br>
-<%=@enquiry.subject_one%><br>
-<%=@enquiry.subject_two%><br>
-<%=@enquiry.budget%><br>
-<%=@enquiry.start_date%><br>
-<%=@enquiry.end_date%><br>
-<%=@enquiry.venue%><br>
+body {
+	font-family: Karla, sans-serif;
+	font-size: 18px;
+}
 
-<%= link_to "Create Listing for this enquiry", new_client_enquiry_listing_path(@client, @enquiry) %>
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
+th {
+	background-color: #B0E0E6
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+</style>
+
+</head>
+<body> 
+<div class="container">  
+  <h2> Details of enquiry made by <%=@enquiry.client.name_of_company%> </h2>	
+  <table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Name of Company</th>
+      <th>Contact Person</th>
+      <th>Contact Email</th>
+      <th>Subject 1</th>
+      <th>More Details</th>
+    </tr>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%=@enquiry.client.name_of_company%></td>
+        <td><%=@enquiry.client.first_name%> <%=@enquiry.client.last_name%></td>
+        <td><%=@enquiry.client.email%></td>
+        <td><%=@enquiry.subject_one%></td>
+        <td><%=@enquiry.subject_two%></td>
+        <td><%=@enquiry.budget%></td>
+        <td><%=@enquiry.venue%></td>
+        <td><%=@enquiry.remarks%></td>
+        <td><%=@enquiry.start_date%></td>
+        <td><%=@enquiry.end_date%></td>
+        <td><%=link_to "Details", client_enquiry_path(@client, e)%></td>
+      </tr>
+  </tbody>
+</table>
+<br>
+</div>
+</body>
+</html>
+
 
 
 
