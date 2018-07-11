@@ -8,7 +8,7 @@ class EnquiriesController < ApplicationController
 		if @client.admin? 
 			@enquiry= Enquiry.order(:id).page(params[:page]).per(5)
 		else
-			redirect_to clients_path
+			redirect_to root_path
 		end
 	end
 
@@ -27,8 +27,8 @@ class EnquiriesController < ApplicationController
 		@enquiry = current_client.enquiries.new(enquiry_params)
 		if @enquiry.save
 			UserMailer.enquiry_email(@client).deliver_now
-			redirect_to clients_path
-		else 
+			redirect_to root_path
+		else
 			render "new"
 		end
 	end
