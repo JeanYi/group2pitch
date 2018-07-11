@@ -58,7 +58,7 @@ class ListingsController < ApplicationController
 		@client = Client.find(params[:client_id])
 		@listing = Listing.find(params[:id])
 		if @listing.update(listing_params)
-			redirect_to listings_path
+			redirect_to root_path
 		else
 			render 'edit'
 		end

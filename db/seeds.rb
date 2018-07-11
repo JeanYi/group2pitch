@@ -1,15 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 trainer = [
 	["Jack", "Beanstalk", "jack@hotmail.com", "01234", "123", "Leadership", "Teacher", "nil", "nil", 2600],
 	["Jill", "Pussy", "jill@hotmail.com", "01234", "123", "Leadership", "Teacher", "nil", "nil", 2600],
 	["James", "Rocket", "james@hotmail.com", "01234", "123", "Programming", "Tech Genius", "nil", "nil", 2600],
-	["Jessie", "Rocket", "jessie@hotmail.com", "01234", "123", "Programming", "Tech Genius", "nil", "nil", 26000],
+	["Jessie", "Rocket", "jessie@hotmail.com", "01234", "123", "Programming", "Tech Genius", "nil", "nil", 2600],
 	["Ash", "Dispersed", "ash@hotmail.com", "01234", "123", "Motivation", "Speaker", "nil", "nil", 2600],
 	["Brock", "Stoned", "brock@hotmail.com", "01234", "123", "Motivation", "Speaker", "nil", "nil", 2600],
 	["Misty", "Wet", "misty@hotmail.com", "01234", "123", "Teamwork", "CEO of previous company", "nil", "nil", 2600],
@@ -17,7 +10,7 @@ trainer = [
 ]
 
 client = [
-	["Admin", "Admin", "Admin", "Admin", "admin@admin.com", "123", "0123456789", "admin"],
+	["Admin", "", "NextProg", "Admin", "admin@admin.com", "123", "0123456789", "admin"],
 	["Hanzo", "Shimada", "Shimada Clan", "CEO", "hanzo@hotmail.com", "123", "01234", "normal"],
 	["Genji", "Shimada", "Shimada Clan", "Janitor", "genji@hotmail.com", "123", "01234", "normal"],
 	["Winston", "Gorilla", "Moon & Co.", "Mascot", "winston@hotmail.com", "123", "01234", "normal"],
@@ -29,31 +22,31 @@ client = [
 ]
 
  enquiry = [
- 	["Motivational", "Programming", "3000", "April", "May", "KLCC", 1],
-       ["Programming", "Spiritual", "5000", "April", "May", "KLCC", 2],
-      ["Motivational", "Programming", "6000", "May", "June" "Pavillion", 3],
-      ["Programming", "Spiritual", "7000", "June", "July", "Pavillion",4],
-       ["Spritual", "Programming", "5500", "August", "September", "KLCC", 5],
-       ["Spiritual", "Motivational", "7500", "September", "October", "Pavillion", 6],
-       ["Programming", "Spiritual", "6000", "October", "November", "KLCC", 7],
-     ["Motivational", "Spiritual", "4000", "November", "December", "Pavillion", 8]
+ 	["Conversational Intelligence", "Unconscious Bias", "3000.00", "2018-08-10", "2018-08-12", "KLCC", 2],
+    ["Unconscious Bias","Conversational Intelligence", "5000.00",  "2018-11-10","2018-11-12", "KLCC", 2],
+    ["Leadership for C-Suites", "Team Building", "6000.00", "2018-09-12", "2018-09-13", "Pavillion", 2],
+    ["Leadership for C-Suites", "Unconscious Bias", "7000.00", "2018-08-11", "2018-08-14", "Pavillion",4],
+    ["Unconscious Bias", "Programming", "5500.00", "2018-09-13", "2018-09-17", "KLCC", 5],
+    ["Organizational Culture", "Leadership for C-Suites", "7500.00", "2018-08-29", "2018-08-30", "Pavillion", 6],
+    ["Organizational Culture", "Unconscious Bias", "6000.00", "2018-11-14", "2018-11-17", "KLCC", 5],
+    ["Team Building", "Human Library", "4000.00", "2018-08-17", "2018-08-19", "Pavillion", 7]
  ]
 
 listing = [
-	["Motivational Speech", "Training for motivating employees.", "Morale of the employees is crticical for an organisation and we provide trainining
-    for employees which would allow them to stay focused during high leve situations.", "January", "February", "KLCC",1, 1, 1, "paid"],
-      ["Programming", "Provide a 4 week introductory course on HTML and CSS.", "The ability to code is important especially in an era where technology
-        is everywhere. Teaching your employees to code in HTML and CSS would provide them some basics in programming to able
-        to produce beautiful and interactive websites", "February", "March", "Pavillion", 7, 7, 7, "paid"],
-       ["Spiritual", "A holistic development of the human mind and pscyhe.", "A general camp for employees to learn how to be in touch with their spirtual side.
-         Employees will be taught how to meditate and breathing exercises.", "March", "April", "KLCC", 3, 3, 3, "paid"],
-         ["Motivational Speech", "Training for motivating employees.", "Morale of the employees is crticical for an organisation and we provide trainining
-     for employees which would allow them to stay focused during high leve situations.", "April", "May", "Pavillion", 4, 4,4,  "unpaid"],
-             ["Spiritual", "A holistic development of the human mind and pscyhe.","A general camp for employees to learn how to be in touch with their spirtual side.
-          Employees will be taught how to meditate and breathing exercises.", "May", "June", "KLCC", 5, 5,5, "unpaid"],
-         ["Programming", "Provide a 4 week introductory course on HTML and CSS.", "The ability to code is important especially in an era where technology
-        is everywhere. Teaching your employees to code in HTML and CSS would provide them some basics in programming to able
-         to produce beautiful and interactive websites", "June", "July", "Pavillion", 6, 6, 6, "unpaid"]
+	["Motivational Speech", "Unconscious Bias", "5000.00", "Morale of the employees is critical for an organisation and we provide training
+    for employees which would allow them to stay focused during high level situations.", "2018-08-10", "2018-08-11", "KLCC",1, 1, 1, "Paid"],
+    ["Programming", "Conversational Intelligence", "2000.00", "Provide a 4 week introductory course on HTML and CSS.", "The ability to code is important especially in an era where technology
+    is everywhere. Teaching your employees to code in HTML and CSS would provide them some basics in programming to able 
+    to produce beautiful and interactive websites", "2018-08-10", "2018-08-10", "Pavillion", 1, 2, 2, "Paid"],
+    ["Leadership for C-Suites", "Team Building", "2500.00", "A holistic development of the human mind and pscyhe.", "A general camp for employees to learn how to be in touch with their spirtual side.
+    Employees will be taught how to meditate and breathing exercises.", "2018-08-10", "2018-08-12", "KLCC", 2, 3, 3, "Paid"],
+    ["Motivational Speech", "Unconscious Bias", "5000.00", "Training for motivating employees.", "Morale of the employees is crticical for an organisation and we provide trainining
+     for employees which would allow them to stay focused during high leve situations.", "2018-08-12", "2018-08-16", "Pavillion",2,4,4,"Unpaid"],
+    ["Spiritual", "Unconscious Bias", "3600.00", "A holistic development of the human mind and pscyhe.","A general camp for employees to learn how to be in touch with their spirtual side.
+    Employees will be taught how to meditate and breathing exercises.", "May", "2018-08-10", "2018-08-15", 3, 5,5, "Unpaid"],
+    ["Programming", "Unconscious Bias", "3400.00", "Provide a 4 week introductory course on HTML and CSS.", "The ability to code is important especially in an era where technology
+    is everywhere. Teaching your employees to code in HTML and CSS would provide them some basics in programming to able
+    to produce beautiful and interactive websites", "2018-07-28", "2018-07-31", "Pavillion", 4, 6, 6, "Unpaid"]
 ]
 
 static_listing = [
@@ -240,8 +233,8 @@ enquiry.each do |subject_one, subject_two, budget, start_date, end_date, venue, 
 	Enquiry.create(subject_one: subject_one, subject_two: subject_two, budget: budget, start_date: start_date, end_date: end_date, venue: venue, client_id: client_id)
 end
 
-listing.each do |name, short_desc, long_desc, start_date, end_date, venue, client_id, trainer_id, enquiry_id, payment_status|
-	Listing.create(name: name, short_desc: short_desc, long_desc: long_desc, start_date: start_date, end_date: end_date, venue: venue, client_id: client_id, trainer_id: trainer_id, enquiry_id: enquiry_id, payment_status: payment_status)
+listing.each do |name, name_two, price, short_desc, long_desc, start_date, end_date, venue, client_id, trainer_id, enquiry_id, payment_status|
+	Listing.create(name: name, name_two: name_two, price: price, short_desc: short_desc, long_desc: long_desc, start_date: start_date, end_date: end_date, venue: venue, client_id: client_id, trainer_id: trainer_id, enquiry_id: enquiry_id, payment_status: payment_status)
 end
 
 static_listing.each do |venue, description, budget, pax, duration, requirement, audience, image, title|
