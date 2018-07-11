@@ -9,6 +9,7 @@ class EnquiriesController < ApplicationController
 			@enquiry= Enquiry.order(:id).page(params[:page]).per(5)
 		else
 			redirect_to root_path
+		end
 	end
 
 	def show
