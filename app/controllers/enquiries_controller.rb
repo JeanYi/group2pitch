@@ -28,6 +28,7 @@ class EnquiriesController < ApplicationController
 		if @enquiry.save
 			UserMailer.enquiry_email(@client).deliver_now
 			redirect_to root_path
+		else
 			render "new"
 		end
 	end
