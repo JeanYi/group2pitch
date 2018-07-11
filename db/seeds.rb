@@ -83,7 +83,7 @@ Develop a robust action plan for achieving your C-suite goals.</br>
 </br>
 <b>Module 6 - C-Suite Readiness Challenge</b></br>
 Test your C-suite skills in a real-life business challenge that you’ll tackle as part of a small team. Design your solution to the problem, drawing on all the tools and models you’ve learned. Present your team’s business plan for assessment by an expert panel and get constructive feedback.</br>
-", "20000", 10, "May-August", "7 Years Working Experience", "Managers and above","app/assets/images/2.png", "Leadership for C-Suites" ],
+", "20000", 10, "May-August", "7 Years Working Experience", "Managers and above","app/assets/images/2.jpg", "Leadership for C-Suites" ],
 	["Empire Damansara", "Conversational Intelligence is a highly innovative, science based program. It provides you with frameworks on how to leverage the power of neuroscience to establish an environment of trust and connection, activate the parts of the brain that trigger instant growth and innovation for your clients and create coaching conversations that lead to never before experienced levels of success and transformation. The program has been revolutionizing the coaching industry over the past 3 years. </br>
 	</br>
 	<b>Module 1 - Co-Creating Conversations</b>
@@ -148,7 +148,7 @@ Test your C-suite skills in a real-life business challenge that you’ll tackle 
 	<li>How to give feedback to stay in sync with people even when the pressure is on and the risks are high</li>
 	<li>How to engage the brain in ways that access the prefrontal cortex’s best gifts and talents for managing change and transformation</li>
 	</ul>
-", "5000", 20, "April-May", "No working experience required", "Open to employees of all levels", "app/assets/images/5.png", "Conversational Intelligence™" ],
+", "5000", 20, "April-May", "No working experience required", "Open to employees of all levels", "app/assets/images/5.jpg", "Conversational Intelligence™" ],
 	["Pavilion", "If team building and other offsite events are to offer value, their inclusion in an overall corporate structure of philosophies, values and practices is critical. The New Earth is about the process of supporting a work group to operate in a team-oriented environment that is characterized by such philosophies as shared purpose, shared values, shared vision, shared mission and a performance development system that enables people to grow both personally and professionally. It is ideal for organizations with a high mix of seniority in age, experience and competency. </br>
 		</br>
 		<b>Module 1 - Context Setting</b>
@@ -198,7 +198,7 @@ Test your C-suite skills in a real-life business challenge that you’ll tackle 
 		<li>Merit awards</li>
 		<li>Acknowledgement</li>
 		<li>Final circle-up</li>
-		</ul>", "4000", 40, "May-August", "No working experience required", "Open to employees of all levels", "app/assets/images/4.png", "Teambuilding" ],
+		</ul>", "4000", 40, "May-August", "No working experience required", "Open to employees of all levels", "app/assets/images/4.jpg", "Teambuilding" ],
 	["One World Hotel", "Welcome to Leadership, Vision, and Organizational Culture. This module focuses on the fundamental role of leadership, vision, and organizational culture in the success of your community’s jail transition strategies. In this module, we offer a broader definition of leadership, one that fits the Transition from Jail to Community (TJC) model. For us, leaders are individuals, regardless of their position within an organization, who have the ability to provide the vision, leadership, and resources to empower people to go beyond what they thought they were capable of doing to build the organizational culture necessary to grow and sustain successful transition from jail to the community. Formal leadership is indispensible to the TJC effort, but informal leaders are also vital to successful TJC implementation and sustainability. We also believe that leadership can be learned. Most people are not born leaders, but learn leadership behaviors through trial and error. </br>
 		</br>
 		This module includes:
@@ -206,7 +206,7 @@ Test your C-suite skills in a real-life business challenge that you’ll tackle 
 		<li>The characteristics of effective leadership</li>
 		<li>Creating and transmitting a leadership vision to others</li>
 		<li>Understanding your agency’s organizational culture and how to guide it in the best interests of sustained TJC efforts</li>
-		</ul>", "3000", 20, "May-August", "5 Years Working Experience", "Managers and above","app/assets/images/3.png", "Organizational Culture" ],
+		</ul>", "3000", 20, "May-August", "5 Years Working Experience", "Managers and above","app/assets/images/3.jpg", "Organizational Culture" ],
 	["Westin", "The Human Library™ is designed to build a positive framework for conversations that can challenge stereotypes and prejudices through dialogue. The Human Library is a place where real people are on loan to readers. A place where difficult questions are expected, appreciated and answered.The Human Library or “Menneskebiblioteket” as it is called in Danish, was developed in Copenhagen in the spring of 2000 as a project for Roskilde Festival by Ronni Abergel and his brother Dany and colleagues Asma Mouna and Christoffer Erichsen.</br>
 		</br>
 		The original event was open eight hours a day for four days straight and featured over fifty different titles. The broad selection of books provided readers with ample choice to challenge their stereotypes and so they did. More than a thousand readers took advantage leaving books, librarians, organisers and readers stunned at the impact of the Human Library.</br>
@@ -221,11 +221,11 @@ Test your C-suite skills in a real-life business challenge that you’ll tackle 
 		One of the creators, Ronni Abergel, realising the potential of the idea, decided after the first event, to begin to work to promote the idea to potential new organizers. Since then he has founded the Human Library Organization, produced a guide to new organizers with the Nordic Council of Ministers and the Council of Europe. Travelled to many countries to help train new local organizers, plan launch events and present the idea to interested organizations and public authorities. Today it is estimated that the Human Library has been presented in more than 7o countries around the world, most of them in partnership with local organizers.</br>
 		</br>	
 		<b>COST EFFICIENT ACTIVITY</b></br>
-		Further to having good partners to realize the project. The Human Library has another advantage to organizers around the world. Its not very expensive and can be organized no matter how big or small your budget is. The biggest ressource needed to facilitate a Human Library is time and idle hands to do the tasks. And due to this great quality it has been possible to stage events in a wide range of countries and with very little funding. This feature has made it possible to present Human Libraries in Romania, Iceland, Finland, Norway, Italy, Holland, Slovenia, Belgium, Portugal and Australia – to mention a few.", "500", 10, "August-September", "No working experience required", "Open to employees of all levels", "app/assets/images/6.png", "Human Library™"],
+		Further to having good partners to realize the project. The Human Library has another advantage to organizers around the world. Its not very expensive and can be organized no matter how big or small your budget is. The biggest ressource needed to facilitate a Human Library is time and idle hands to do the tasks. And due to this great quality it has been possible to stage events in a wide range of countries and with very little funding. This feature has made it possible to present Human Libraries in Romania, Iceland, Finland, Norway, Italy, Holland, Slovenia, Belgium, Portugal and Australia – to mention a few.", "500", 10, "August-September", "No working experience required", "Open to employees of all levels", "app/assets/images/6.jpg", "Human Library™"],
 	["Hilton", "In this course, you'll deepen your understanding of unconscious biases, how they influence behavior, and how they impact us all. You'll also learn numerous actions you can take to help counter bias in your own work environment. This course begins with a brief introduction to unconscious bias. In the scenarios that follow, you'll explore bias and what you can do about it through video scenarios, interactive exercises and opportunities for reflection. Unconscious bias is a quick and often inaccurate judgment based on limited facts and our own life experiences. These judgments can give individuals and groups both unearned advantage and unearned disadvantage in the workplace.</br>
 	</br>
 	People can be biased about just about anything — not just things like gender, skin color, or age, but also things like communication style or what someone does in their free time. Unconscious bias is not intentional — it's part of the lens through which we see the world. In our everyday lives, when people don't fit our internalized expectations, we can sometimes have difficulty seeing their talents, motivations, and potential clearly — which can mean we interact with them less effectively. When we understand how biases influence our behavior, we can take action to create an inclusive culture — one where everyone can contribute, innovate, and provide solutions that our customers love.
-	", "4000", 40, "September-January", "No working experience required", "Open to employees of all levels","app/assets/images/1.png", "Unconscious Bias"]
+	", "4000", 40, "September-January", "No working experience required", "Open to employees of all levels","app/assets/images/1.jpg", "Unconscious Bias"]
 	]
 
 trainer.each do |first_name, last_name, email, phone_number, password, skills, prior_experience, birthday, start_date, rate_per_day|
