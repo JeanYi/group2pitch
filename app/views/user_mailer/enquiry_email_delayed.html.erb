@@ -5,11 +5,11 @@
    </head>
    
    <body>
-      <h1>Welcome to fsd.com, <%= @enquiry.client.first_name %></h1>
+      <h1>Welcome to ProgDev, <%= @enquiry.client.first_name %></h1>
       
       <p>This is your final quotation.</p>
       <p><%= @listing.name %>
 
-      <%= link_to "Please click", client_enquiry_listing_url(@client.id, @enquiry.id, @listing.id) %>
+      <p>Please click <%= link_to "here", history_url %> to make your payment</p>
    </body>
 </html>

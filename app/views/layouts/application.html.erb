@@ -59,7 +59,7 @@
         <div class="x-dropdown-content-right">
         <% if current_trainer %>
           <%= link_to "Sign Out", sign_out_trainer_path, method: :delete %> 
-        <% else %> 
+        <% elsif current_client%> 
           <%= link_to "Sign Out", sign_out_path, method: :delete %> 
         <% end %> 
           <a href="/sign_in_trainer">Login as Trainer</a>
