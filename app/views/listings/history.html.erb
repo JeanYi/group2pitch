@@ -54,7 +54,11 @@ h3 {
 	                <td><%=l.name %></td>
 	                <td><%=l.name_two %></td>
 	                <td><%=l.venue %></td>
+	                <% if !l.price.to_s.split(".").last.nil? %>
+	                <td><%=l.price.to_s.split(".").last.length < 2 ? l.price.to_s + "0": l.price %></td>
+	                <% else %>
 	                <td><%=l.price %></td>
+	                <% end %>
 	                <td><%=l.payment_status %></td>
 	                <td><%= link_to "Make Payment", braintree_payment_path(id: l.id, enquiry_id: l.enquiry_id, client_id: l.client_id) %></td>
 	            </tr>
