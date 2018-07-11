@@ -36,6 +36,7 @@
     <div class="x-navbar-left"> <a href="/static_listings">Programmes</a> </div>
     
     <div class="x-dropdown">
+      <% if current_client %>
       <button class="x-dropbtn">Enquiries
         <i class="fa fa-caret-down"></i>
       </button>
@@ -48,6 +49,7 @@
         <% end %> 
         <% end %> 
       </div>
+      <% end %>
     </div> 
      
     <div class="x-navbar-right"><a href="/get_started">Get Started</a> </div>
