@@ -27,7 +27,7 @@ client = [
     ["Leadership for C-Suites", "Team Building", "6000.00", "2018-09-12", "2018-09-13", "Pavillion", 2],
     ["Leadership for C-Suites", "Unconscious Bias", "7000.00", "2018-08-11", "2018-08-14", "Pavillion",4],
     ["Unconscious Bias", "Programming", "5500.00", "2018-09-13", "2018-09-17", "KLCC", 5],
-    ["Organizational Culture", "Leadership for C-Suites", "7500.00", "2018-08-29", "2018-08-30", "Pavillion", 6]5
+    ["Organizational Culture", "Leadership for C-Suites", "7500.00", "2018-08-29", "2018-08-30", "Pavillion", 6],
     ["Organizational Culture", "Unconscious Bias", "6000.00", "2018-11-14", "2018-11-17", "KLCC", 5],
     ["Team Building", "Human Library", "4000.00", "2018-08-17", "2018-08-19", "Pavillion", 7]
  ]
