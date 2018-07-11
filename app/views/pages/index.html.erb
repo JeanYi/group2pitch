@@ -1,63 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
-  </head>
   <body>
 
   <!-- Slideshow container -->
-  <div class="slideshow-container">
+  <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Take the mystery out of selecting and developing leaders </h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form>
+              <div class="form-row" style="align-items:baseline">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  <%=form_tag search_static_listings_path, method: :get, class:"form-control form-control-lg" do%>
+                  <div class="form-group"> <%= text_field_tag :search, nil, class:"form-control", placeholder: "Search" %> </div> </div>
+                  <div class="col-12 col-md-3">
+                  <%=submit_tag "Search", :name => nil, class:"btn btn-block btn-lg btn-dark" %>
+                  </div>
+                  <%end%>             
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
 
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src= "/assets/Image1.jpg" style="width:100%">
-      <div class="text">Caption One</div>
-    </div>
 
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src= "/assets/Image4.jpg" style="width:100%">
-      <div class="text">Caption Two</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src= "/assets/Image6.jpg" style="width:100%">
-      <div class="text">Caption Three</div>
-    </div>
-
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <!-- The dots/circles -->
-    <div class="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span> 
-      <span class="dot" onclick="currentSlide(2)"></span> 
-      <span class="dot" onclick="currentSlide(3)"></span> 
-    </div>
-  </div>
   <!-- End of slideshow container -->
 
   <!-- Programs container -->
-  <div class= "programs-container"> 
-    
+
     <div class="main-title">
-      <h1> Our Programs </h1>
-      <p>Programs curated for your company's needs</p>
+        <h1> TOP RATED PROGRAMS </h1> </b> 
     </div>
 
-    <div class="workshop-container">
+  <div class= "programs-container"> 
 
       <div class="workshops"> 
         <span class="icon">
         <i class="fas fa-users" style="font-size:40px;"></i>
         </span>
-        <h5>LEADERSHIP</h5>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h5>CONVERSATIONAL INTELLIGENCE </h5> </b>
+        <p>This program has been revolutionizing the coaching industry over the past 3 years. Leverage the power of neuroscience to establish an environment of trust and connection within your workforce. </p>
         <p><a href="#"><button> Learn more </button></a></p>
       </div>
         
@@ -65,8 +51,8 @@
         <span class="icon">
         <i class="fas fa-comment-dots"style="font-size:40px;"></i>
         </span>
-        <h5>BUSINESS COMMUNICATIONS</h5>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h5>LEADERSHIP FOR C-SUITES </h5>
+        <p>C-suite executives need new frameworks and competencies to chart a path through  change and to lead in a purposeful and collaborative way that brings the whole organisation with them. This is a course designed for senior executives.</p>
         <p><a href="#"><button> Learn more </button></a></p>
       </div>
 
@@ -74,8 +60,8 @@
         <span class="icon">
         <i class="fas fa-keyboard" style="font-size:40px;"></i>
         </span>
-        <h5>CODING 101</h5>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h5>UNCONSCIOUS BIAS</h5> </b>
+        <p>In this course, you'll deepen your understanding of unconscious biases, how they influence behavior, and how they impact us all. You'll also learn numerous actions you can take to help counter bias in your own work environment.</p>
         <p><a href="#"><button> Learn more </button></a></p>
       </div>
 
@@ -83,13 +69,11 @@
         <span class="icon">
         <i class="fas fa-chalkboard-teacher" style="font-size:40px;"></i>
         </span>
-        <h5>PRESENTATION 101</h5>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h5>ORGANIZATIONAL CULTURE </h5> 
+        <p>In this course, you'll explore the different types of cultures prevalent today. For established, merged or stagnant companies, we introduce tools and practices required to successfully make a change in your existing culture.</p>
         <p><a href="#"><button> Learn more </button></a></p>
       </div>
 
-    </div>
-  
   </div>
   <!-- End of programs container -->
 
@@ -139,10 +123,7 @@
             </blockquote>
           </div>
   </div>
-  <%=form_tag search_static_listings_path, method: :get do%>
-          <%= text_field_tag :search, nil, placeholder: "Search" %>
-          <%=submit_tag "Search" %>
-        <%end%>
+
   <!-- End of testimonials container -->
 
   </body>

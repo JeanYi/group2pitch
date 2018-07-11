@@ -38,5 +38,8 @@ resources :clients do
   get 'braintree/new'
   post 'braintree/checkout'
 
+  # CUSTOM ROUTES FOR SEARCH 
+  get "/search" => "static_listings#search", as:"search_page"
+
 end
 

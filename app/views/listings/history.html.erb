@@ -1,1 +1,68 @@
-<p> HAHAHA </p>
+<style> 
+
+body {
+	font-family: Karla, sans-serif;
+	font-size: 18px;
+  }
+
+.profile-container {
+    padding: 20px;
+    display:flex;
+	flex-direction: row;
+	height:90%;
+	width:90%%;
+}
+
+h3 {
+	padding:10px 30px 0;
+}
+
+</style>
+
+<h3> Your History </h3>
+
+<div class="profile-container">
+
+  <div class="card" style="width:300px">
+    <img class="card-img-top" src="/assets/Profile.png" alt="Card image" style="width:100%, border-radius:10px;">
+    <div class="card-body">
+      <h4 class="card-title", style="padding:initial"><%=current_client.first_name %><%=current_client.last_name%></h4>
+      <p class="card-text"><%=current_client.name_of_company %></p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+
+<!-- Table Card -->
+	<div  class="card pmd-card">
+	    <table id="example-checkbox" class="table pmd-table table-hover table-striped display responsive nowrap" cellspacing="0" width="100%">
+    		<thead class="thead-dark">
+    	        <tr>
+	                <th>Quotation ID</th>
+	                <th>Subject One</th>
+	                <th>Subject Two</th>
+	                <th>Suggested Venue(s)</th>
+	                <th>Price</th>
+	                <th>Make Payment</th>
+	                <th>Payment Status</th>
+	            </tr>
+	    	</thead>
+	        <tbody>
+				  <% current_client.enquiries.each do |t| %>
+					<% t.listings.each do |l| %> 
+	            <tr>
+	                <td><%=l.id %></td>
+	                <td><%=l.name %></td>
+	                <td><%=l.name_two %></td>
+	                <td><%=l.venue %></td>
+	                <td><%=l.price %></td>
+	                <td><%=l.payment_status %></td>
+	                <td><%= link_to "Make Payment", braintree_payment_path(id: l.id, enquiry_id: l.enquiry_id, client_id: l.client_id) %></td>
+	            </tr>
+	                <% end %>
+				  <% end %> 
+	        </tbody>
+	    </table>
+	</div>
+
+</div> 
+

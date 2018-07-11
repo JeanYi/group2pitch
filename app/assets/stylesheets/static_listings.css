@@ -4,6 +4,7 @@ h2  {
     text-align: center;
     padding-top: 30px;
 }
+
 .description    {
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
@@ -24,6 +25,7 @@ h4  {
     padding-left: 10px;
     padding-right: 10px;
 }
+
 .allsummary {
             min-height: 10rem;
             margin: 15px auto 15px auto;
@@ -32,4 +34,9 @@ h4  {
             background: #E8E8E8;
             border-radius: 10px;
             opacity: 0.9;
+}
+
+.paginate-pages {
+    font-size: 20px;
+    margin:auto;
 }
