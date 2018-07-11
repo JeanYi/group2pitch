@@ -24,3 +24,8 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/config/application.yml
+
+# Ignore images 
+/images/
+/printf '*.jpg\n*.jpeg\n*.png\n*.gif\n' >> .gitignore

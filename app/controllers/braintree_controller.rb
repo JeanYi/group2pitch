@@ -18,8 +18,8 @@ class BraintreeController < ApplicationController
 		   )
 
 		  if result.success?
-		    redirect_to :root, :flash => { :success => "Transaction successful!" }
-		    @listing.paid!
+		    redirect_to history_path :root, :flash => { :success => "Transaction successful!" }
+		    @listing.Paid!
 		  else
 		    redirect_to :root, :flash => { :error => "Transaction failed. Please try again." }
 		end

@@ -14,7 +14,16 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Karla|Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Karla|Montserrat|Poppins:500,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS, then Propeller js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
   </head>
   <body>
@@ -22,20 +31,21 @@
   <!-- Nav Bar -->
   <div class="x-navbar">
     <div class="x-navbar-left"> <a href="/">Home</a> </div>
-    <div class="x-navbar-left"> <a href="#aboutus">About Us</a> </div>
-    <div class="x-navbar-left"> <a href="#aboutus">Contact Us</a> </div>
+    <div class="x-navbar-left"> <a href="#">About Us</a> </div>
+    <div class="x-navbar-left"> <a href="#">Contact Us</a> </div>
+    <div class="x-navbar-left"> <a href="/static_listings">Programmes</a> </div>
     
     <div class="x-dropdown">
-      <button class="x-dropbtn">Programme
+      <button class="x-dropbtn">Enquiries
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="x-dropdown-content">
         <% if current_client %> 
-          <a href=><%= link_to "Make an Enquiry", new_client_enquiry_path(current_client.id) %></a>        
-          <a href="/enquiries/history">Your history</a>
-        <% end %> 
+          <%= link_to "Make an Enquiry", new_client_enquiry_path(current_client.id) %>        
+          <a href="/enquiries/history" class="nounderline">Your history</a>
         <% if current_client.admin? %> 
-          <a href=><%= link_to "All Enquiries", client_enquiries_path(current_client.id) %></a>
+          <%= link_to "All Enquiries", client_enquiries_path(current_client.id) %>
+        <% end %> 
         <% end %> 
       </div>
     </div> 
@@ -56,7 +66,13 @@
           <a href="/sign_in">Login as Client </a>
       </div>
     </div> 
+    <% if current_client %> 
+      <div class="x-navbar-right"> <a href=""> Welcome back, <%= current_client.first_name%>!</a></div>
+      <% else %> 
+      <div class="x-navbar-right">  </div>
+    <% end %> 
 </div>
+
   <!-- End of Nav Bar -->
 
   <%= yield %>
@@ -91,7 +107,7 @@
 
     </div>
 
-      <div class="y-row copyright">
+      <div class="y-row-copyright">
           <p>
             <small class="y-block">&copy; 2018 HR Program Curators Pitch. All Rights Reserved.</small> 
           </p>
@@ -105,6 +121,7 @@
           </p>
       </div>
   </footer>
+
 
   </body>
 </html>

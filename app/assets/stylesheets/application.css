@@ -34,7 +34,7 @@ body {
 }
 
 /* Links inside the navbar on the left side */
-.x-navbar-left a {
+.x-navbar-left a, .x-navbar-left a:hover {
   float: left;
   font-size: 20px;
   color: white;
@@ -44,7 +44,7 @@ body {
 }
 
 /* Links inside the navbar on the right side */
-.x-navbar-right a {
+.x-navbar-right a, .x-navbar-right a:hover {
   float: right;
   font-size: 20px;
   color: white;
@@ -74,6 +74,7 @@ body {
 /* Add a red background color to navbar links on hover */
 .x-navbar a:hover, .x-dropdown:hover .x-dropbtn {
   background-color: none;
+  text-decoration: none;
 }
 
 /* Dropdown content (hidden by default) */
@@ -99,6 +100,7 @@ body {
 /* Add a grey background color to dropdown links on hover */
 .x-dropdown-content a:hover {
   background-color: #ddd;
+  text-decoration: none;
 }
 
 /* Show the dropdown menu on hover */
@@ -149,6 +151,7 @@ body {
 /* Add a grey background color to dropdown links on hover */
 .x-dropdown-content-right a:hover {
   background-color: #ddd;
+  text-decoration: none;
 }
 
 /* Show the dropdown menu on hover */
@@ -196,6 +199,7 @@ body {
 
 #y-footer .y-footer-links li a:hover {
   text-decoration: blue;
+  text-decoration: none;
 }
 
 .y-widget {
@@ -224,7 +228,7 @@ body {
   color: #fff;
 }
 
-#y-footer .y-copyright .y-block {
+#y-footer .y-row-copyright .y-block {
   display: block;
   text-align: center;
   font-size: 15px;
